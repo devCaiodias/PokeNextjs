@@ -2,16 +2,18 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "../../public/logosemfundo.png"
 
+import styles from '../styles/NavBar.module.css'
+
 export default function Navbar() {
     return (
-        <nav>
-            <div>
-                <Image src={logo} alt="logo do site" width="90"  />
-                <h1>NextPokedex</h1>
+        <nav className={styles.navbar}>
+            <div className={styles.logo}>
+                <h1>NEXT POKÉDEX</h1>
             </div>
-            <ul>
-                <li><Link href="/">Home</Link></li>
-                <li><Link href="/Sobre">Sobre</Link></li>
+                <Image className={styles.Image} src={logo} alt="logo do site" width="80"  />
+            <ul className={styles.link_items}>
+                <li><Link className={styles.link} href="/">Home</Link></li>
+                <li><Link className={styles.link} href="/Sobre">Sobre</Link></li>
             </ul>
         </nav>
     )

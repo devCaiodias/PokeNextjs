@@ -10,7 +10,7 @@ export default function MainContainer({children}: Readonly<Props>) {
      return (
         <>
             <Navbar /> 
-            <main>
+            <main className="main-container">
                 {children}
             </main>
             <Footer />
