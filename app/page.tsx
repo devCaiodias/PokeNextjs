@@ -1,4 +1,6 @@
-// import styles from "./page.module.css";
+import styles from "./page.module.css";
+import Image from "next/image";
+import poke from '../public/semfundopoke.png'
 
 import axios from "axios";
 
@@ -14,14 +16,18 @@ export default async function Home() {
   
 
   return (
-    <div>
-      <h1>Podedex</h1>
-      <ul>
-        {data.data?.map((pokemon: PostProps) => (
-          <li key={pokemon.id}>{pokemon.name}</li>
-        ))}
-      </ul>
+    <>
+      <div className={styles.titles_container}>
+        <h1 className={styles.title}>Poké<span>Dex</span></h1>
+        <Image src={poke} alt="Pokedex" width="70" />
+      </div>
 
-    </div>
+      <div className={styles.pokemon_container}>
+        {data.data?.map((pokemon: PostProps) => (
+          <p key={pokemon.id}>{pokemon.name}</p>
+        ))}
+      </div>
+
+    </>
   );
 }

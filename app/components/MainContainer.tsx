@@ -1,5 +1,6 @@
 import Footer from "./Footer";
 import Navbar from "./NavBar";
+// import Head from "next/head";
 
 
 interface Props {
@@ -9,8 +10,8 @@ interface Props {
 export default function MainContainer({children}: Readonly<Props>) {
      return (
         <>
-            <Navbar /> 
             <main className="main-container">
+                <Navbar /> 
                 {children}
             </main>
             <Footer />
