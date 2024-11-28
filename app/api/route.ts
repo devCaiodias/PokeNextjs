@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server"
 
 export async function GET(request: Request) {
-    const maxPokemons = 251
+    const maxPokemons = 252
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=${maxPokemons}`)
     const data = await res.json()
     

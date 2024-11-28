@@ -1,8 +1,10 @@
 import styles from "./page.module.css";
 import Image from "next/image";
+import axios from "axios";
+
 import poke from '../public/semfundopoke.png'
 
-import axios from "axios";
+import Card from "./components/Card";
 
 type PostProps = {
   map(arg0: (pokemon: PostProps) => import("react").JSX.Element): import("react").ReactNode;
@@ -10,10 +12,11 @@ type PostProps = {
   name: string
 }
 
-export default async function Home() {
 
-  const { data } = await axios.get<{ data: PostProps }>('http://localhost:3000/api')
+
+export default async function Home() { 
   
+  const { data } = await axios.get<{ data: PostProps }>('http://localhost:3000/api')
 
   return (
     <>
@@ -23,11 +26,10 @@ export default async function Home() {
       </div>
 
       <div className={styles.pokemon_container}>
-        {data.data?.map((pokemon: PostProps) => (
-          <p key={pokemon.id}>{pokemon.name}</p>
-        ))}
+        {data.data?.map((pokemon: PostProps) => {
+            return <Card key={pokemon.id} pokemon={pokemon} />;
+        })}
       </div>
-
     </>
   );
 }
