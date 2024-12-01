@@ -1,37 +1,21 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+### Este é um projeto de uma Pokédex, inspirado no universo Pokémon, que permite aos usuários visualizar informações detalhadas sobre diferentes Pokémon.
 
-## Getting Started
+## Funcionalidades 
+ Na página inicial, o usuário pode ver uma lista de Pokémon com nome, número e imagem.
 
-First, run the development server:
+ Ao clicar em 'Detalhes', o usuário é redirecionado para uma página onde pode ver informações como tipo, altura e peso do Pokémon.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tecnologias Utilizadas
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ Frontend: Html, Css, Ts, Next.js e react
+ Backend: https://pokeapi.co/api/v2/pokemon. Api utilizada no projeto 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Diferenciais
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+ Interface visual atrativa com temas personalizados.
+ Navegação clara e intuitiva.
+ Estrutura modular para fácil manutenção e expansão.
 
-## Learn More
+## Desafios e Aprendizados
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# PokeNextjs
+ saber usar Server-side-render, Rotas dinamicas e mais uma skill de saber usar Next.js 

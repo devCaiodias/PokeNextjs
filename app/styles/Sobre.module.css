@@ -13,11 +13,13 @@
     font-family: "Roboto", sans-serif;
     padding: 10px;
     margin-bottom: 10px;
+    font-weight: bolder;
 }
 
 .description {
     max-width: 500px;
     margin: 0 auto 1.5em;
     line-height: 1.4;
+    font-weight: bold;
 }
 
