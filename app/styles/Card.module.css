@@ -45,3 +45,18 @@
     background-color: #a200ffb9;
     color: wheat;
 }
+
+
+@media (min-width: 400px) and (max-width: 600px) {
+    .card {
+        width: 50%;
+    }
+
+    
+}
+
+@media (min-width: 600px ) and (max-width: 1179px) { 
+    .card { 
+        width: 60%;
+    }
+}

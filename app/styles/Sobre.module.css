@@ -23,3 +23,13 @@
     font-weight: bold;
 }
 
+@media (min-width: 400px) and (max-width: 600px) {
+
+    .sobre {
+        background: none;
+    }
+
+    .description {
+        font-weight: 600;
+    }
+}

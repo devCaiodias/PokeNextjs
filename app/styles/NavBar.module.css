@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Passion+One:wght@400;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 .navbar {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items:  center;
@@ -28,7 +29,6 @@
 }
 
 
-
 .link_items {
     display:  flex;
     list-style: none;
@@ -52,4 +52,23 @@
 .link:hover {
     text-shadow: 0 0 45px #6700A5;
     border-bottom: 3px solid white;
+}
+
+
+@media (min-width: 400px) and (max-width: 600px) {
+
+    .logo h1 {
+        display: none;
+    }
+
+    .Image {
+        position: relative;
+        left: -40px;
+    }
+
+    .link_items {
+        position: relative;
+        right: -25px;
+    }
+    
 }

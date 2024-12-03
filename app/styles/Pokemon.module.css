@@ -133,3 +133,13 @@ background-color: #e9e;
     border-right: 2px solid black;
     padding-right: 15px;
 }
+
+
+@media (min-width: 400px) and (max-width: 600px) {
+    
+    .pokemon_container {
+        border: none;
+        box-shadow: none;
+    }
+    
+}

@@ -12,3 +12,11 @@
 .footer span {
     font-weight: bold;
 }
+
+
+@media (min-width: 400px) and (max-width: 600px) {
+
+    .footer { 
+        width: 100vw;
+    }
+}

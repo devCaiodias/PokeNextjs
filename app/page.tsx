@@ -12,12 +12,9 @@ type PostProps = {
   name: string
 }
 
-
-
 export default async function Home() { 
   
   const { data } = await axios.get<{ data: PostProps }>('http://localhost:3000/api')
-
   return (
     <>
       <div className={styles.titles_container}>
