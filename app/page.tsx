@@ -1,20 +1,31 @@
+'use client'
 import styles from "./page.module.css";
 import Image from "next/image";
 import axios from "axios";
+import { useState, useEffect } from "react";
 
 import poke from '../public/semfundopoke.png'
 
 import Card from "./components/Card";
 
 type PostProps = {
-  map(arg0: (pokemon: PostProps) => import("react").JSX.Element): import("react").ReactNode;
   id: number,
   name: string
 }
 
-export default async function Home() { 
-  
-  const { data } = await axios.get<{ data: PostProps }>('http://localhost:3000/api')
+export default function Home() { 
+  const [posts, setPosts] = useState<PostProps[]>([]);
+
+  useEffect(() => {
+    axios.get<{ data: PostProps[] }>('http://localhost:3000/api')
+      .then(response => {
+        setPosts(response.data.data);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }, []);
+
   return (
     <>
       <div className={styles.titles_container}>
@@ -23,7 +34,7 @@ export default async function Home() {
       </div>
 
       <div className={styles.pokemon_container}>
-        {data.data?.map((pokemon: PostProps) => {
+        {posts.map((pokemon: PostProps) => {
             return <Card key={pokemon.id} pokemon={pokemon} />;
         })}
       </div>

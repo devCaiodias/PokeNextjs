@@ -2,15 +2,15 @@ import Image from "next/image"
 
 import styles from "../../styles/Pokemon.module.css"
 
-interface Props {
-    params: {idpokemon: number}
+
+type Props = {
+  params: Promise<{ idpokemon: string | number}>
 }
 
 export default async function PokemonsDetalhes({params}: Props) {
-    const id = params.idpokemon
+    const id = (await params).idpokemon
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
     const pokemon = await res.json()
-    
 
     return (
         <>

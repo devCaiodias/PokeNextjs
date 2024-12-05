@@ -1,9 +1,14 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   images: {
-    domains: ["img.pokemondb.net"]
-  }
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "img.pokemondb.net",
+        pathname: "/sprites/home/normal/**",
+      },
+    ],
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;

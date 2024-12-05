@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server"
 
 export async function GET() {
-    const maxPokemons = 1025
-    // const maxPokemons = 251 Rederização com menos tempo de resposta 
+    // const maxPokemons = 1025
+    const maxPokemons = 251
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=${maxPokemons}`)
     const data = await res.json()
     
