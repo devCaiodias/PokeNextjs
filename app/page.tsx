@@ -17,12 +17,17 @@ export default function Home() {
   const [posts, setPosts] = useState<PostProps[]>([]);
 
   useEffect(() => {
-    axios.get<{ data: PostProps[] }>('http://localhost:3000/api')
+    const maxPokemons = 251;
+    axios.get(`https://pokeapi.co/api/v2/pokemon/?limit=${maxPokemons}`)
       .then(response => {
-        setPosts(response.data.data);
+        console.log("Dados recebidos:", response.data); // Log dos dados recebidos
+        response.data.results.forEach((item: { id: number; }, index: number) => {
+          item.id = index + 1
+      });
+        setPosts(response.data.results); // Certifique-se de que a estrutura está correta
       })
       .catch(error => {
-        console.error(error);
+        console.error("Erro ao buscar Pokémon:", error); // Log do erro
       });
   }, []);
 
